@@ -1,0 +1,101 @@
+# Angular-JS-App
+
+# Why we need client side frameworks?
+We have basically 3 elements in an MVC -
+<br>HTML (View) - reads from the model and renders it. 
+<br>Data (Model)
+<br>Logic (Controller) -  does all business processing .
+<br>These elements should be separate from each other. 
+That's the reason we have a lot of client side MVC frameworks.
+This is the problem Angular tries to solve.
+
+# Why Angular JS?
+* HTML is great for declaring static documents. But it fails/falters when we try to use it for declaring DYNAMIC views in web-aaplications.
+* Angular JS lets you extend HTML vocabulary. 
+
+In a basic JS/jquery way of handling/ code to print date on the page, you
+<br> Find the element from the DOM
+<br> run logic from JS/JQ
+<br> Add/update the content to the element.
+<br> Code example - 
+<br> < div id="date">
+  <!== show current date here>
+  </ div >
+ 
+<br> What if we've an EXTENDED HTML. Meaning we've an element that just fetches that data for us in HTML.
+<br> Something like < current-date / > or < div current-date ></ div >
+* Angular, hence, helps you create custom elements in the HTML. You can then use code to bind functionality to those custom elements
+
+In a basic Angular way of handling code to print date on the page, you
+<br> Create an element-type in the DOM
+<br> Define the logic. 
+<br> Use that element-type.
+
+* Once the logic is defined and a custom element is created, you can use it in as many places you want.
+
+# Download 
+* Website for Angular JS 1.x - angularjs.org -Used this in this course.
+* Website for Angular 2 - angular.io
+* Visual Studio Code for Text editing.
+
+# How Angular Works?
+* Write HTML
+* Include Angular Script
+* Use Angular Derivates now. ng-app, ng-if etc are declaratives as they're pre-defined and we just use their functionality.
+
+# Angular Directives ng-app, ng-if, ng-init (convention: ng-), these comes with Angular.
+* ng-app - Declare the application as Angular Application. Auto-bootstrap the angular application. 
+
+* ng-if is false - https://codepen.io/nikhil_gupta/pen/OzprOO
+* ng-if is true - https://codepen.io/nikhil_gupta/pen/PEpXKK
+* Element gets added/removed from the DOM depending upon this directive's value of true/false.
+
+* ng-init example 1 - https://codepen.io/nikhil_gupta/pen/vpxvdg
+* ng-init example 2 - https://codepen.io/nikhil_gupta/pen/vpxvjx
+* NOTE - NEVER USE ng-init. Not a good practise.
+
+# Scope
+* Note above, you created a variable in 1 directive using ng-init and then used it in other directive ng-if
+* How did that happen?
+* The variables declared shares a common space named as SCOPE.
+* Check this page out - https://github.com/Nikhilgupta1891/Angular-JS-App/blob/dev/Scope.png
+
+# ng-bind Derivates
+* Now, you want to print the value of the variable you declared by ng-init. 
+* Use declarative: ng-bind
+* Example - https://codepen.io/nikhil_gupta/pen/ypMGrW
+* Print on same line using span- https://codepen.io/nikhil_gupta/pen/LeWMob
+* ng-bind allows you to add value of a variable into the markup.
+* You can also perform operations on the value - https://codepen.io/nikhil_gupta/pen/JMWxob
+* We need to use span with ng-bind because we have to have an element to do ng-bind to it. 
+* If you don't use span, then we would loose the context inside. Example - https://codepen.io/nikhil_gupta/pen/EoWrQW
+
+# {{variableName}} - alternative of ng-bind
+* Example - https://codepen.io/nikhil_gupta/pen/wpJNwE
+* Same like ng-bind, you can perform operation here - https://codepen.io/nikhil_gupta/pen/GyWzgx
+* {{Expressions}} - https://codepen.io/nikhil_gupta/pen/baqzYy
+* With {{}}, we don't need to use span element.
+
+# Why ng-init not a good practise. 
+* Keeping all the logic in the header, not a good design approach. Code would look messy. 
+* Separate the busines logic from the view. 
+* We don't want the controller logic to be in ng-init. 
+* Hence, we use other derivate : ng-controller. 
+
+# ng-controller
+* In MVC, C is for controller, which contains the business logic and it should be separate from the view and Model.
+* ng-controller lets you declare some login separately and then use it in the view, instead of declaring all the logic, variable iniialisation in the HTML tags.
+* Example - (this isn't supported anymore after AngularJS1.1) but give you an idea - https://codepen.io/nikhil_gupta/pen/rpmOXZ
+* If a ng-conroller is mentioned in a tag like div, then before rendering the content of the tag, controller logic is called upon. 
+* To use a function (declared in ng-controller), you have to register it in an Angular Module.
+
+# Angular Module
+* It's like a phonebook to register stuff and refer to it.
+* Frist, create a module.
+* Register the function as a controller in the module.
+* then you can use the ng-controller.
+* In Angular, there is a global variable that comes with the script - "angular". 
+* If you do a console.log(angular), it shows the contents - 
+
+
+
