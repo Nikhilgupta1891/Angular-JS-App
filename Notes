@@ -91,11 +91,19 @@ In a basic Angular way of handling code to print date on the page, you
 
 # Angular Module
 * It's like a phonebook to register stuff and refer to it.
+* Global place for creating, registering, and retreiving Angular Modules.
+* Module is a collection of directives, controllers, and other stuff.
 * Frist, create a module.
+* Syntax - 
+var myModule = angular.module('myModule', []);
 * Register the function as a controller in the module.
 * then you can use the ng-controller.
 * In Angular, there is a global variable that comes with the script - "angular". 
 * If you do a console.log(angular), it shows the contents - 
+* Code - https://codepen.io/nikhil_gupta/pen/ZvyVYa. Save this code in index.html and run it directly on chrome. Open console, "main method called!" will be called.
+
+# Dependency Injection and Scope, use of $ sign
+https://commie.io/#bwC2IEcj
 
 
 

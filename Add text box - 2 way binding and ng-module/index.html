@@ -1,0 +1,23 @@
+<html ng-app="MyModule"> 
+
+	<head>
+		<script src= "angular.js"></script> 
+	</head>
+
+	<body>
+		<div ng-controller = "myCtrl">
+			Please enter you name here <input ng-model="username" type="text"></input>
+			<p>Your name is: {{username}}</p>
+		</div>
+	
+	<script>
+		console.log("app.js script called");
+		var newModule = angular.module("MyModule", []);
+		newModule.controller("myCtrl", MainFunction);
+
+		function MainFunction() {
+		}
+	</script>
+	
+	</body>
+</html>

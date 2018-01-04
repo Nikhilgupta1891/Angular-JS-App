@@ -1,0 +1,25 @@
+<html ng-app> 
+
+	<head>
+		<script src= "angular.js"></script> 
+	</head>
+
+	<body>
+		<div>
+			<input type="text" ng-model="textString" ></input><br>
+			<input type="checkbox" ng-model="checkboxBoolean"></input><br>
+			<input type="date" ng-model="dateVal"></input>	<br>
+			<p> Radio : 
+				<input type="radio" ng-model="Radio1" value="value1">Radio 1</input>
+				<input type="radio" ng-model="Radio1" value="value2">Radio 2</input>
+				<input type="radio" ng-model="Radio1" value="value3">Radio 3</input>
+			</p><br>
+			<p> text:  {{textString}}</p>
+			<p> checkbox val: {{checkboxBoolean}} </p>
+			<p> date selected: {{dateVal}} </p>
+			<p> radio selected: {{Radio1}} </p>
+			
+		</div>
+	
+	</body>
+</html>

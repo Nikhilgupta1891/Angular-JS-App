@@ -1,0 +1,33 @@
+<html ng-app="MyModule">
+
+<head>
+  <script src="angular.js"></script>
+</head>
+
+<body>
+  <div ng-controller="myCtrl">
+    <h1> Clock App </h1>
+    <p> The current time is: {{dateInString}}</p>
+
+    <button ng-click="updateTime()">Refresh time</button>
+  </div>
+
+  <script>
+    console.log("app.js script called");
+    var newModule = angular.module("MyModule", []);
+    newModule.controller("myCtrl", dateFunction);
+
+    function dateFunction($scope) {
+      var dateElement = new Date();
+      $scope.dateInString = dateElement.toTimeString();
+      $scope.updateTime = function() {
+        console.log("Button clicked!");
+        var dateElement = new Date();
+        $scope.dateInString = dateElement.toTimeString();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
